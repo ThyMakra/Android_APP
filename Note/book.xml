@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/pageHolder"
+                android:adjustViewBounds="true"
+        />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/previousButton"
+                android:text="@string/backArrow"
+                android:textColor="@android:color/black"
+                android:textSize="64sp"
+                android:onClick="changePage"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+        />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nextButton"
+                android:text=">"
+                android:textColor="@android:color/black"
+                android:textSize="64sp"
+                android:onClick="changePage"
+                android:layout_centerVertical="true"
+                android:layout_alignRight="@+id/pageHolder"
+                android:layout_marginRight="10dp"
+        />
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/goToPage"
+                android:inputType="number"
+                android:hint="Search Pages"
+                android:layout_centerHorizontal="true"
+                android:layout_alignBottom="@+id/pageHolder"
+                android:textAlignment="center"
+        />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="     "
+                android:id="@+id/goButton"
+                android:onClick="changePage"
+                android:background="@drawable/ic_go"
+                android:layout_centerHorizontal="true"
+                android:layout_alignRight="@+id/goToPage"
+                android:layout_alignBottom="@+id/pageHolder"
+                android:textSize="48sp"
+        />
+
+</RelativeLayout>
